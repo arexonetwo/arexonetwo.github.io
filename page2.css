@@ -1,0 +1,170 @@
+html {
+
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    
+}
+.header {
+    background: #2b43ad;
+    height: 7rem;
+    width: 100%;
+}
+
+.linksBox {
+    text-align: center;
+    float: left;
+    padding: 2rem 0;
+}
+
+.links {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #111;
+    font-size: 1.5rem;
+}
+
+.links:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#icon {
+    margin-left: 35rem;
+    margin-top: 0.5rem;
+    background: black; 
+}
+
+.buttonBox {
+ float: right;
+ margin: 0.5rem 2rem;
+}
+
+.buttonImg {
+    width: 5rem; 
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+    border-radius: 1rem;
+    background: white;
+}
+
+#button1:hover {
+    animation-name: button-hover1;
+    animation-duration: 0.5s;
+    background: gray;
+}
+
+
+@keyframes button-hover1 {
+    from {background:white}
+    to {background:gray}
+}
+
+
+.newsBox {
+    width: 100%;
+    background: white;
+    height: fit-content;
+    align-content: center;
+    display: flex;
+    border-top: 2rem outset black;
+    border-bottom: 2rem solid black;
+    margin: 1.5rem 0;
+}
+
+.newsImage {
+    margin: auto;
+    width: 75rem;
+    height: 30rem;
+
+}
+
+.products {
+    margin: auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: fit-content 1px fit-content 0.5rem;
+    grid-template-areas:
+        "item1 item2 item3 item4"
+        "item1Text item2Text item3Text item4Text"
+        "item5 item6 item7 item8"
+        "item5Text item6Text item7Text item8Text";
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+}
+
+@keyframes products-hover {
+    from {box-shadow: 0.2rem 0.2rem 1rem; margin: 1rem;}
+    to {box-shadow: 0.5rem 0.5rem 1rem; margin: 0;}
+}
+
+@keyframes products-idle {
+    0% {box-shadow: 0.1rem 0.1rem 0.33rem}
+    50% {box-shadow: 0.3rem 0.3rem 1rem}
+    100% {box-shadow: 0.1rem 0.1rem 0.33rem}
+}
+
+.button {
+    text-align: center;
+    animation: products-idle 3s infinite;
+    user-select: none;
+    margin: 1rem;
+}
+
+.button:hover {
+    animation: products-hover 0.3s;
+    background: #D4D9D9;
+    border: 0.1rem solid gray;
+    box-shadow: 0.5rem 0.5rem 1rem;
+    margin: 0;
+}
+
+#item1 {
+    grid-area: item1;
+}
+
+#item2 {
+    grid-area: item2;
+
+}
+
+#item3 {
+    grid-area: item3;
+    
+}
+
+
+#item4 {
+    grid-area: item4;
+   
+}
+
+
+#item5 {
+    grid-area: item5;
+    
+}
+
+
+#item6 {
+    grid-area: item6;
+   
+}
+
+
+#item7 {
+    grid-area: item7;
+   
+}
+
+
+#item8 {
+    grid-area: item8;
+   
+}
