@@ -47,12 +47,15 @@ body {
     background: white;
 }
 
-#button1:hover {
+#button3:hover {
     animation-name: button-hover1;
     animation-duration: 0.5s;
     background: gray;
 }
-
+.shoppingCart {
+    width: 10;
+    height: 10;
+}
 
 @keyframes button-hover1 {
     from {background:white}
