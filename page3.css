@@ -33,18 +33,6 @@ body {
     text-decoration: underline;
 }
 
-#icon {
-    margin-left: 35rem;
-    margin-top: 0.5rem;
-    background: black; 
-}
-
-@keyframes icon-animation{
-    0% {}
-
-
-}
-
 .buttonBox {
  float: right;
  margin: 0.5rem 2rem;
@@ -59,12 +47,15 @@ body {
     background: white;
 }
 
-#button1:hover {
+#button3:hover {
     animation-name: button-hover1;
     animation-duration: 0.5s;
     background: gray;
 }
-
+.shoppingCart {
+    width: 10;
+    height: 10;
+}
 
 @keyframes button-hover1 {
     from {background:white}
@@ -78,15 +69,18 @@ body {
     height: fit-content;
     align-content: center;
     display: flex;
-    border-top: 2rem outset black;
-    border-bottom: 2rem solid black;
-    margin: 1.5rem 0;
+    border-top: 2rem outset #111;
+    border-bottom: 2rem solid #111;
+    margin-bottom: 2rem;
 }
 
 .newsImage {
     margin: auto;
     width: 75rem;
     height: 30rem;
+    border-left: #111 10px solid;
+    border-right: #111 10px solid;
+    background: rgb(54, 54, 54);
 
 }
 
@@ -94,83 +88,157 @@ body {
     margin: auto;
     width: 70%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: fit-content 1px fit-content 0.5rem;
+    grid-template-columns: fit-content fit-content fit-content fit-content;
+    grid-template-rows: fit-content 4rem fit-content 4rem;
     grid-template-areas:
         "item1 item2 item3 item4"
         "item1Text item2Text item3Text item4Text"
         "item5 item6 item7 item8"
         "item5Text item6Text item7Text item8Text";
-        grid-column-gap: 1rem;
-        grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
 }
 
 @keyframes products-hover {
-    from {box-shadow: 0.2rem 0.2rem 1rem; margin: 1rem;}
-    to {box-shadow: 0.5rem 0.5rem 1rem; margin: 0;}
+    from {background: #D2D9D9;}
+    to {background: #A3ADAD;}
 }
 
-@keyframes products-idle {
-    0% {box-shadow: 0.1rem 0.1rem 0.33rem}
-    50% {box-shadow: 0.3rem 0.3rem 1rem}
-    100% {box-shadow: 0.1rem 0.1rem 0.33rem}
-}
-
-.button {
-    text-align: center;
-    animation: products-idle 3s infinite;
-    user-select: none;
-    margin: 1rem;
-}
-
-.button:hover {
-    animation: products-hover 0.3s;
-    background: #D4D9D9;
-    border: 0.1rem solid gray;
-    box-shadow: 0.5rem 0.5rem 1rem;
-    margin: 0;
+@keyframes button-click  {
+    from {background:#A3ADAD}
+    to {background: gray}
 }
 
 #item1 {
     grid-area: item1;
+    border-radius: 1rem;
+    background:#D2D9D9;
+    text-align: center;
+    user-select: none;
+}
+
+#item1:hover {
+    animation: products-hover 0.3s;
+    background: #A3ADAD;
+    border: 0.1rem solid gray;
+}
+
+#item1:active {
+    animation: button-click 0.2s;
 }
 
 #item2 {
     grid-area: item2;
-
+    text-align: center;
+    border-radius: 1rem;
+    background:#D2D9D9;
+    user-select: none;
 }
+#item2:hover {
+    animation: products-hover 0.3s;
+    background: #A3ADAD;
+    border: 0.1rem solid gray;
+}
+#item2:active {
+    animation: button-click 0.2s;
+}
+
+#item1:focus {}
 
 #item3 {
-    grid-area: item3;
     
+    grid-area: item3;
+    text-align: center;
+    border-radius: 1rem;
+    background:#D2D9D9;
+    user-select: none;
 }
 
-
+#item3:hover {
+    animation: products-hover 0.3s;
+    background: #A3ADAD;
+    border: 0.1rem solid gray;
+}
+#item3:active {
+    animation: button-click 0.2s;
+}
 #item4 {
     grid-area: item4;
-   
+    text-align: center;
+    border-radius: 1rem;
+    background:#D2D9D9;
+    user-select: none;
 }
-
+#item4:hover {
+    animation: products-hover 0.3s;
+    background: #A3ADAD;
+    border: 0.1rem solid gray;
+}
+#item4:active {
+    animation: button-click 0.2s;
+}
 
 #item5 {
     grid-area: item5;
-    
+    text-align: center;
+    border-radius: 1rem;
+    background:#D2D9D9;
+    user-select: none;
 }
-
+#item5:hover {
+    animation: products-hover 0.3s;
+    background: #A3ADAD;
+    border: 0.1rem solid gray;
+}
+#item5:active {
+    animation: button-click 0.2s;
+}
 
 #item6 {
     grid-area: item6;
-   
+    text-align: center;
+    border-radius: 1rem;
+    background:#D2D9D9;
+    user-select: none;
 }
-
+#item6:hover {
+    animation: products-hover 0.3s;
+    background: #A3ADAD;
+    border: 0.1rem solid gray;
+}
+#item6:active {
+    animation: button-click 0.2s;
+}
 
 #item7 {
     grid-area: item7;
-   
+    text-align: center;
+    border-radius: 1rem;
+    background:#D2D9D9;
+    user-select: none;
 }
 
-
+#item7:hover {
+    animation: products-hover 0.3s;
+    background: #A3ADAD;
+    border: 0.1rem solid gray;
+}
+#item7:active {
+    animation: button-click 0.2s;
+}
 #item8 {
     grid-area: item8;
-   
+    text-align: center;
+    border-radius: 1rem;
+    background:#D2D9D9;
+    user-select: none;
+}
+
+#item8:hover {
+   animation: products-hover 0.3s;
+   background: #A3ADAD;
+    border: 0.1rem solid gray;
+}
+#item8:active {
+    animation: button-click 0.2s;
 }
