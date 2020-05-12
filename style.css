@@ -53,7 +53,18 @@ body {
 
 #shoppingCart {
     width: 10rem;
-    margin: 1.25rem
+    margin: 1.25rem;
+}
+
+.green {
+    background: rgb(49, 160, 49) !important;
+}
+.green:hover {
+    background: rgb(58, 230, 58) !important;
+}
+
+.green:active {
+    background: rgb(62, 124, 62) !important;
 }
 
 #shoppingCart i {
